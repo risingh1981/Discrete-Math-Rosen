@@ -1,0 +1,50 @@
+Chapter 1:
+5. Given positive integers m and n, interactively play the game
+of Chomp.
+∗6. Given a portion of a checkerboard, look for tilings of this
+checkerboard with various types of polyominoes, including
+dominoes, the two types of triominoes, and larger polyominoes.
+
+Chapter 2:
+6. Given a bijection f from the set {1, 2, . . . , n} to itself, find
+f^−1.
+
+Chapter 3: Done
+
+Chapter 4: Do after studying Cryptography
+15. Given a message and positive integers a and b less than
+26 with gcd(a, 26), encrypt this message using an affine
+cipher with key (a, b); and given a message encrypted using
+the affine cipher with key (a, b), decrypt this message,
+by first finding the decryption key and then applying the
+appropriate decryption transformation.
+16. Find the original plaintext message from the ciphertext
+message produced by encrypting the plaintext message
+using a shift cipher. Do this using a frequency count of
+letters in the ciphertext.
+∗17. Construct a valid RSA encryption key by finding two
+primes p and q with 200 digits each and an integere > 1
+relatively prime to (p − 1)(q − 1).
+18. Given a message and an integer n = pq where p and
+q are odd primes and an integer e > 1 relatively prime
+to (p − 1)(q − 1), encrypt the message using the RSA
+cryptosystem with key (n, e).
+19. Given a valid RSA key (n, e), and the primes p and q
+with n = pq, find the associated decryption key d.
+20. Given a message encrypted using the RSA cryptosystem
+with key (n, e) and the associated decryption key d, decrypt
+this message.
+21. Generate a shared key using the Diffie-Hellman key exchange
+protocol.
+22. Given the RSA public and private keys of two parties,
+send a signed secret message from one of the parties to
+the other.
+
+Chapter 5: Done
+
+Chapter 6: 
+*4. Given an equation x1 + x2 +· · ·+xn = C, where C is a
+constant, and x1, x2, . . . , xn are nonnegative integers, list
+all the solutions. (Do after studying integer partitions.)
+
+Chapter 7:

@@ -1,0 +1,26 @@
+Time/Memory Calculations for WellFormed Formula Generator for 
+different values of n.
+Time for n = 1 symbols is: 20500 ns. WFF Count: 3
+Time for n = 2 symbols is: 9500 ns. WFF Count: 3
+Time for n = 3 symbols is: 62900 ns. WFF Count: 33
+Time for n = 4 symbols is: 60700 ns. WFF Count: 33
+Time for n = 5 symbols is: 792400 ns. WFF Count: 573
+Time for n = 6 symbols is: 903300 ns. WFF Count: 573
+Time for n = 7 symbols is: 18757000 ns. WFF Count: 13023
+Time for n = 8 symbols is: 18378200 ns. WFF Count: 13023
+Time for n = 9 symbols is: 252373200 ns. WFF Count: 334323
+Time for n = 10 symbols is: 266947900 ns. WFF Count: 334323
+Time for n = 11 symbols is: 8012234800 ns. WFF Count: 9234063
+Time for n = 12 symbols is: 9390378100 ns. WFF Count: 9234063
+Computer runs out of memory for n>=13.
+
+Actual Memory Usage:
+For n = 7:
+Total allocated size: 1.3 MB
+For n = 9:
+Total allocated size: 35.9 MB ~28x increase from n = 7
+For n = 11:
+Total allocated size: 1151.9 MB ~ 32x increase from n = 9
+With this trend:
+For n = 13, it would need ~ 34,500 MB(34.5 GB) to hold the dictionary of WFFs. 
+Available RAM is only 8 GB.
