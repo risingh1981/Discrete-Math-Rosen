@@ -4,11 +4,14 @@
 
 def main():
     # Input
-    n = 6
-    r = 4
+    n = 3
+    r = 1
+    # Generate input arr
+    inputArr = [x for x in range(1, n + 1)]
+    
 
     # Output
-    answer = rcombs(r,n)
+    answer = rcombs(inputArr, r)
     print(answer)
 
     
@@ -19,9 +22,10 @@ def main():
 # The next r-combination after a1a2 · · · ar can be obtained in the following way:
 # 1) Locate the last element ai in the sequence such that ai ≠ n − r + i.
 # 2) Replace ai with ai + 1 and aj with ai + j − i + 1, for j = i + 1, i + 2, . . . , r.
-def rcombs(r,n):
+def rcombs(inputArr, r):
     rcombsArr = [[x for x in range(1,r+1)]]
-    lastrcomb = [x for x in range(n-r+1,n+1)]
+    lastrcomb = inputArr[-r:]
+    n = len(inputArr)
  
     while(rcombsArr[-1] != lastrcomb):
         newrcomb = nextcomb(rcombsArr[-1],r,n)

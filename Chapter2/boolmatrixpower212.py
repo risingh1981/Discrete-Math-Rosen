@@ -1,7 +1,7 @@
 # Chapter 2, Computer Project 12: Given a square Boolean matrix A and a positive integer n,
 # find A[n].
 # Import function from previous exercise which calculcates boolean product of 2 0/1 Matrices
-from booleanproduct211 import booleanproduct
+from DiscreteMathRosen.Chapter2.booleanproduct211 import booleanproduct
 
 def main():
     # Input: Original boolean matrix and power of matrix desired.
@@ -11,7 +11,7 @@ def main():
          [1,1,0]]
     # Output
     # Variable Ap is the result of matrix A taken to pth power. Variable unitat is the power of A that 
-    # results in the unit matrix, or None if no power upto the value of power variable results in a unit matrix.
+    # results in the unit matrix(all-ones matrix), or None if no power upto the value of power variable results in a unit matrix.
     Ap, unitat = boolpower(A, power)
     print(f"Matrix A = {A}.")
     print(f"A^{power} = {Ap}")
@@ -33,7 +33,6 @@ def boolpower(matrix, power):
         return matrix, unitat
     resultMatrix = matrix
     for i in range(power-1):
-        print(f"In loop for calculating powers. i ={i}")
         resultMatrix = booleanproduct(matrix,resultMatrix)
         if (resultMatrix == unitMatrix):
             unitat = i + 2

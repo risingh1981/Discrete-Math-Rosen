@@ -6,28 +6,41 @@ from time import perf_counter_ns
 
 def main():
     # Input: Enter value of n for set {1,2,...,n}
-    #n = 4
+    #n = 3
+    
     # Output:
-    for n in range(2,16):# Output: 
+    
+    
+    for n in range(0,10):# Output: 
         # Timing for my function:
+        baseSet = [x for x in range(1, n+1)]
         start = perf_counter_ns()
-        answer = allcombinations(n)
+        answer = allcombinations(baseSet)
         end = perf_counter_ns()
         mytime = end - start
+        mysize = len(answer)
+        #input(f"n={n} answer={answer}")
     
         # Timing for py combinations function:
         start = perf_counter_ns()
         totArr = []
         arr = [x for x in range(1,n+1)]
+        newcombos = []
         for i in range(1, n+1):
-            newcombos = (list(combinations(arr,i)))
-            totArr.append(newcombos)
+            newcombos.extend(list(combinations(arr,i)))
+            #input(f"newcombos:{newcombos}")
+        totArr.extend(newcombos)
         end = perf_counter_ns()
         pytime = end - start
- 
+        pySize = len(totArr)
+        #input(f"n={n}  totArr:{totArr}")
+
+    
         print(f"For n = {n}, mytime: {mytime} ns,  pytime: {pytime} ns")
+        print(f"Sizes Equal:{mysize == pySize}")
         # Timing Results:
-        '''
+        
+        """
         For n = 2, mytime: 9700 ns,  pytime: 3900 ns
         For n = 3, mytime: 25500 ns,  pytime: 7500 ns
         For n = 4, mytime: 34300 ns,  pytime: 8000 ns
@@ -42,15 +55,12 @@ def main():
         For n = 13, mytime: 20200200 ns,  pytime: 863500 ns
         For n = 14, mytime: 45461900 ns,  pytime: 1610100 ns
         For n = 15, mytime: 82681800 ns,  pytime: 6736500 ns
-        '''
-
-
-
-def allcombinations(n):
-    baseSet = [x for x in range(1, n+1)]
+        """
+def allcombinations(baseSet):
     # Generate binary numbers upto 2^n - 1 and store them in list binArr[].
     # (There are 2^n subsets including the empty set.)
     binArr = []
+    n = len(baseSet)
     for i in range(1, 2 ** n):
         binArr.append(bin(i))
     # Create empty list to store all the generated combinations.

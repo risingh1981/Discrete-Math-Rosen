@@ -1,6 +1,6 @@
 # Chapter 2, Computer Project 8: Given a square matrix A and a positive integer p, find A^p.
 # Import matrix multiplication function from previous exercise.
-from matrixmulti27 import matrixproduct
+from DiscreteMathRosen.Chapter2.matrixmulti27 import matrixproduct
 
 def main():
     # Input: Enter a square(nxn) matrix(A) and the power(p) you want to take of that matrix.

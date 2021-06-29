@@ -11,18 +11,21 @@ from itertools import permutations
 def main():
     # Input:
     r = 3
-    n = 5
+    n = 3
+    # Generate arr for given value of n
+    inputArr = [x for x in range(1, n + 1)]
+    
     
     # Output
-    answer = rperms(r,n)
+    answer = rperms(inputArr,r)
     # Compare size of answer with pythons list of r-permutations
     print(len(answer) == (len(list(permutations([x for x in range(1,n+1)], r))))) # True
     
     
 # Generate all r-permutations of a set {1,2,...,n} inlexicographic order.   
-def rperms(r,n):
+def rperms(inputArr, r):
     # Generate r-combinations:
-    rcombsArr = rcombs(r,n)
+    rcombsArr = rcombs(inputArr, r)
     # Generate all permutations of the r-combinations
     allpermsArr = []
     for rcomb in rcombsArr:
