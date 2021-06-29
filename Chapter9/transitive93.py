@@ -15,8 +15,7 @@ def main():
 
 def transitive(A):
     dim = len(A)
-    # unitAt is the power of A that results in a unit matrix.
-    # Not relevant for this problem but function boolpower returns 2 values, the power and unitAt.
+   
     aSquared = matrixpower(A, 2)
     
     # For transitivity, A^2 cannot have a non-zero value in spot that was zero in A.
