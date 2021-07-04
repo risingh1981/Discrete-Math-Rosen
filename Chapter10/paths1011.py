@@ -14,7 +14,7 @@ import numpy as np
 
 def main():
     # Input
-    n = 4
+    n = 2
     adjMatrix = [[0, 1, 1, 0], [1, 0, 0, 1], [1, 0, 0, 1], [0, 1, 1, 0]]
 
     # Output: Paths of length n
