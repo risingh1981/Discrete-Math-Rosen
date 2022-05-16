@@ -1,2 +1,2 @@
 # Discrete-Math-Rosen
- Computer Projects for each Chapter in the book Discrete Mathematics and its Applications by Rosen
+ Computer Projects for each Chapter in the book Discrete Mathematics and Its Applications by Rosen 7th Edition.  The programs are in Python and each program is named as follows: {descriptive name}{number} where descriptive name is a word I felt described the program appropriately and the number corresponds to the chapter and program number from the book.  For example Fibonacci102, would be a program that is about fibonacci numbers and is from Chapter 10, Computer Project number 2.
